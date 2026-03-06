@@ -107,8 +107,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/8486919/pexels-photo-8486919.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional plumber"
+                src="https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Professional plumber with tools"
                 className="rounded-xl shadow-2xl"
               />
             </div>
