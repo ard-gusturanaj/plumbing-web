@@ -1,5 +1,3 @@
-import { Wrench } from 'lucide-react';
-
 interface NavigationProps {
   currentPage: string;
   onNavigate: (page: string) => void;
@@ -8,20 +6,27 @@ interface NavigationProps {
 export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'showroom', label: 'Our Work' },
+    { id: 'showroom', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => onNavigate('home')}>
-            <Wrench className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">ProFlow Plumbing</span>
+      <div className="w-full px-6">
+        <div className="relative flex items-center h-16">
+
+          <div
+            className="flex items-center cursor-pointer -ml-4"
+            onClick={() => onNavigate('home')}
+          >
+            <img
+              src="/lgLogoo.png"
+              alt="logo"
+              className="h-16 object-contain"
+            />
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-10">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -37,19 +42,22 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             ))}
           </div>
 
-          <div className="md:hidden flex space-x-4">
+          <div className="md:hidden ml-auto flex space-x-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
                 className={`text-sm font-medium ${
-                  currentPage === item.id ? 'text-blue-600' : 'text-gray-700'
+                  currentPage === item.id
+                    ? 'text-blue-600'
+                    : 'text-gray-700'
                 }`}
               >
                 {item.label}
               </button>
             ))}
           </div>
+
         </div>
       </div>
     </nav>
