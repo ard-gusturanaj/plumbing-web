@@ -23,7 +23,7 @@ export default function ContactPage() {
     {
       icon: Clock,
       title: 'Orari i Punës',
-      details: ['Hënë - Premte: 7:00 - 17:00', 'Shtunë: 7:00 - 16:00'],
+      details: ['Hënë - Premte: 8:00 - 16:00'],
       color: 'bg-purple-50 text-purple-600',
     },
   ];
@@ -31,19 +31,19 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Na Kontaktoni</h1>
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-3">Na Kontaktoni</h1>
           <p className="text-1xl text-gray-600 max-w-3xl mx-auto">
             Keni ndonjë problem me instalimet hidraulike apo keni nevojë për një ofertë?
             Jemi këtu për t’ju ndihmuar! Na kontaktoni përmes mënyrave të mëposhtme.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-shadow"
             >
               <div className={`${info.color} w-14 h-14 rounded-full flex items-center justify-center mb-4`}>
                 <info.icon className="h-7 w-7" />
@@ -67,6 +67,14 @@ export default function ContactPage() {
          
         </div>
       </div>
+
+      <a
+  href="tel:+38344282232"
+  className="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white px-5 py-4 rounded-full shadow-xl flex items-center gap-2 text-lg font-semibold z-50 md:hidden"
+>
+  <Phone className="w-5 h-5" />
+  Call
+</a>
     </div>
   );
 }

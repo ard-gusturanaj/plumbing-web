@@ -53,9 +53,9 @@ export default function ShowroomPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Projektet Tona</h1>
           <p className="text-1xl text-gray-600 max-w-3xl mx-auto">
             Disa nga projektet tona të përfunduara së fundmi. Ne krenohemi me çdo punë,
@@ -83,10 +83,10 @@ export default function ShowroomPage() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
 
-                <div className="border-t border-gray-100 pt-4">
+                <div className="border-t border-gray-100 pt-2">
                   <p className="text-sm font-semibold text-gray-700 mb-2">Pikat Kryesore të Projektit:</p>
                   <ul className="space-y-2">
                     {project.details.map((detail, index) => (
@@ -102,13 +102,13 @@ export default function ShowroomPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl p-12 text-center shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Projekti Juaj Mund të Jetë i Radhës!</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <div className="mt-10 bg-white rounded-2xl p-12 text-center shadow-lg ">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Projekti Juaj Mund të Jetë i Radhës!</h2>
+          <p className="text-1xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Qoftë një riparim i vogël apo një instalim i madh, ne sjellim të njëjtin nivel
             profesionalizmi dhe vëmendjeje ndaj detajeve në çdo punë.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-6">
             <div className="bg-blue-50 px-6 py-3 rounded-lg">
               <p className="text-3xl font-bold text-blue-600">500+</p>
               <p className="text-gray-700">Projekte të Përfunduara</p>
