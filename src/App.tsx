@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
-      <div className="pt-16">
+      <div className="pt-14 md:pt-16">
         {renderPage()}
       </div>
     </div>
