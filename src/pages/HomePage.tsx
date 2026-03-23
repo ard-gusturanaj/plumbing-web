@@ -1,14 +1,4 @@
-import {
-  Shield,
-  Clock,
-  Award,
-  Phone,
-  Wrench,
-  Flame,
-  Droplets,
-  Hammer,
-  Bath,
-} from 'lucide-react';
+import { Shield, Clock, Award, Phone } from 'lucide-react';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -33,62 +23,31 @@ export default function HomePage({ onNavigate }: HomePageProps) {
     },
   ];
 
-  const services = [
-    {
-      title: 'Ujësjellës',
-      description: 'Instalim dhe riparim i sistemit të ujit për banesa dhe lokale.',
-      icon: Droplets,
-    },
-    {
-      title: 'Ngrohje',
-      description: 'Zgjidhje efikase për ngrohje qendrore dhe sisteme moderne.',
-      icon: Flame,
-    },
-    {
-      title: 'Riparim',
-      description: 'Riparime të shpejta dhe profesionale për çdo problem hidraulik.',
-      icon: Wrench,
-    },
-    {
-      title: 'Instalim',
-      description: 'Instalim profesional i pajisjeve dhe sistemeve hidraulike.',
-      icon: Hammer,
-    },
-    {
-      title: 'Sanitari',
-      description: 'Montim dhe mirëmbajtje e pajisjeve sanitare për banjo dhe kuzhina.',
-      icon: Bath,
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div
         className="relative h-[450px] bg-cover bg-center flex items-center"
         style={{
-          backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.hindscc.edu/wp-content/uploads/2022/02/Plumbing-Construction-Technology.jpg)',
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.hindscc.edu/wp-content/uploads/2022/02/Plumbing-Construction-Technology.jpg)',
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Hidro-Termo Profesional
-            <br />
-          
+            Hidraulik Profesional<br />Shërbim i shpejtë dhe i besueshëm
           </h1>
           <p className="text-xl md:text-2xl mb-18 max-w-2xl">
-            Zgjidhje profesionale për të gjitha nevojat tuaja termo-hidraulike në ambiente banesore dhe komerciale.
-            Shërbim i shpejtë dhe i besueshëm.
+           Zgjidhje profesionale për të gjitha nevojat tuaja hidraulike në ambiente banesore dhe komerciale.
+Shërbim i shpejtë dhe i besueshëm.
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-22">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2"></h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -101,40 +60,39 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           ))}
         </div>
 
-       <div className="bg-blue-700 rounded-2xl p-5 md:p-12 text-white">
-  <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">Shërbimet</h2>
-
-  <div className="grid grid-cols-1 gap-3 md:gap-6 mt-6 md:mt-8">
-    {services.map((service, index) => (
-      <div
-        key={index}
-        className="bg-white text-gray-900 rounded-xl md:rounded-2xl p-3 md:p-6 shadow-lg border border-gray-100 flex items-start gap-3 md:gap-4 transition-all"
-      >
-        <div className="w-11 h-11 md:w-16 md:h-16 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-          <service.icon className="w-5 h-5 md:w-8 md:h-8 text-blue-600" />
+        <div className="bg-blue-700 rounded-2xl p-12 text-white text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Shërbimet</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            {[
+              'Ujësjelles',
+              'Ngrohje',
+              'Riparim',
+              'Instalim',
+              'Sanitari',
+            ].map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <p className="font-semibold">{service}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-base md:text-2xl font-bold mb-1 md:mb-2">{service.title}</h3>
-          <p className="text-xs md:text-base text-gray-600 leading-6 md:leading-relaxed">
-            {service.description}
-          </p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
-        <div className="mt-12 bg-gray-50 rounded-2xl p-18">
-          <div className="grid md:grid-cols-2 gap-18 items-center">
+        <div className="mt-20 bg-gray-50 rounded-2xl p-18">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-700 mb-2">LG Company</h2>
-              <p className="text-1xl text-gray-600 mb-4 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-700 mb-4">LG Company</h2>
+              <p className="text-gray-600 mb-4 leading-relaxed">
                 Ekipi ynë i profesionistëve të licencuar sjell një pasuri të madhe njohurish dhe përvoje në çdo punë, pavarësisht madhësisë apo kompleksitetit të saj.
 
-                Ne krenohemi me çmime transparente, cilësi të lartë në punë dhe shërbim të jashtëzakonshëm ndaj klientit. Kur kontaktoni LG, ju nuk po merrni vetëm një hidraulik, por një partner të besueshëm, të përkushtuar për të zgjidhur sfidat tuaja hidraulike në mënyrë efikase dhe profesionale.
+Ne krenohemi me çmime transparente, cilësi të lartë në punë dhe shërbim të jashtëzakonshëm ndaj klientit. Kur kontaktoni LG, ju nuk po merrni vetëm një hidraulik, por një partner të besueshëm, të përkushtuar për të zgjidhur sfidat tuaja hidraulike në mënyrë efikase dhe profesionale.
 
-                Nga mirëmbajtja rutinë deri te instalimet komplekse, ne i trajtojmë të gjitha me të njëjtin nivel profesionalizmi dhe vëmendjeje ndaj detajeve, gjë qё na ka sjellё qindra vlerёsime me pesё yje nga klientёt tanё.
+Nga mirëmbajtja rutinë deri te instalimet komplekse, ne i trajtojmë të gjitha me të njëjtin nivel profesionalizmi dhe vëmendjeje ndaj detajeve, gjë që na ka sjellë qindra vlerësime me pesë yje nga klientët tanë.
+              </p>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+              
               </p>
             </div>
             <div className="relative">
@@ -147,20 +105,20 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact</h2>
+        <div className="mt-20 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Keni nevojë për shërbimet tona? Na kontaktoni tani.
+           Keni nevojë për shërbimet tona? Na kontaktoni tani.
           </p>
-          <div className="flex justify-center relative z-10">
-            <button
-              onClick={() => onNavigate('contact')}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-flex items-center justify-center gap-2 transition-all shadow-lg"
-            >
-              <Phone className="h-5 w-5 shrink-0" />
-              <span>Contact Us</span>
-            </button>
-          </div>
+   <div className="flex justify-center relative z-10">
+  <button
+    onClick={() => onNavigate('contact')}
+    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg inline-flex items-center justify-center gap-2 transition-all shadow-lg"
+  >
+    <Phone className="h-5 w-5 shrink-0" />
+    <span>Contact Us</span>
+  </button>
+</div>
         </div>
       </div>
     </div>
