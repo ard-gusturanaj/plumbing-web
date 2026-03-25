@@ -2,6 +2,32 @@
 
 export default function ShowroomPage() {
   const projects = [
+     {
+      id: 5,
+      title: 'Instalimi i Ngrohjes',
+      description: 'Instalim i plotë i pajisjeve ngrohëse.',
+      image: '/img/vail1.png',
+      category: 'Banimi',
+      details: ['Instalim profesional i pajisjeve', 'Pajisje moderne', 'Teknologji për kursimin e energjisë'],
+    }, 
+    {
+      id: 3,
+      title: 'Ngrohësit e Ujit',
+      description: 'Ngrohësit e ujit me sistem modern dhe efikas.',
+      image:
+        'https://www.thespruce.com/thmb/PkzMacIYDiv711fdDfewXYZvUCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1304894986-5aa4a452c9b848cbb0378529d5797ce2.jpg',
+      category: 'Banimi',
+      details: ['Instalim', 'Ngrohës modern', 'Efikasitet energjetik'],
+    },
+     {
+      id: 7,
+      title: 'Instalim i Sistemit Termo-Hidraulik',
+      description:
+        'Projekt i realizuar me instalim të plotë të ngrohjes në dysheme dhe sistemit hidraulik, me fokus në funksionalitet, siguri dhe përfundim cilësor.',
+      image: '/img/plumbimg.png',
+      category: 'Banimi',
+      details: ['Instalim i plotë i linjave', 'Pajisje cilësore', 'Përfundim i pastër dhe profesional'],
+    },
     {
       id: 1,
       title: 'Instalime të Sanitarisë',
@@ -19,15 +45,7 @@ export default function ShowroomPage() {
       category: 'Banimi',
       details: ['Instalim i lavamanit cilësor', 'Sistem kullimi i përditësuar'],
     },
-    {
-      id: 3,
-      title: 'Ngrohësit e Ujit',
-      description: 'Ngrohësit e ujit me sistem modern dhe efikas.',
-      image:
-        'https://www.thespruce.com/thmb/PkzMacIYDiv711fdDfewXYZvUCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1304894986-5aa4a452c9b848cbb0378529d5797ce2.jpg',
-      category: 'Banimi',
-      details: ['Instalim', 'Ngrohës modern', 'Efikasitet energjetik'],
-    },
+   
     {
       id: 4,
       title: 'Rinovim i Tualeteve Komerciale',
@@ -36,31 +54,17 @@ export default function ShowroomPage() {
       category: 'Komerciale',
       details: ['Instalim dhe rinovim i shumë pajisjeve', 'Përputhje me standardet ADA'],
     },
-    {
-      id: 5,
-      title: 'Instalimi i Ngrohjes',
-      description: 'Instalim i plotë i pajisjeve ngrohëse.',
-      image: '/img/vail1.png',
-      category: 'Banimi',
-      details: ['Instalim profesional i pajisjeve', 'Pajisje moderne', 'Teknologji për kursimin e energjisë'],
-    },
+   
+   
     {
       id: 6,
-      title: 'Instalime dhe Riparime të Kanalizimit',
-      description: 'Instalim dhe riparim i linjës së kanalizimit me teknologji moderne.',
+      title: 'Instalime dhe të Kanalizimit',
+      description: 'Instalim i linjës së kanalizimit me teknologji moderne.',
       image: 'https://www.tonysplumbing.com/wp-content/uploads/2024/04/sewer-pipes-orange.jpg',
       category: 'Banimi',
       details: ['Ndërhyrje minimale', 'Zgjidhje afatgjatë'],
     },
-    {
-      id: 7,
-      title: 'Instalim i Sistemit Termo-Hidraulik',
-      description:
-        'Projekt i realizuar me instalim të plotë të ngrohjes në dysheme dhe sistemit hidraulik, me fokus në funksionalitet, siguri dhe përfundim cilësor.',
-      image: '/img/plumbimg.png',
-      category: 'Banimi',
-      details: ['Instalim i plotë i linjave', 'Pajisje cilësore', 'Përfundim i pastër dhe profesional'],
-    },
+    
   ];
 
   return (
@@ -113,3 +117,4 @@ export default function ShowroomPage() {
     </div>
   );
 }
+

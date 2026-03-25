@@ -1,7 +1,8 @@
-﻿import { Shield, Clock, Award, Phone, Droplets, Flame, Wrench, Bath } from 'lucide-react';
+﻿import { Shield, Award, Phone, Droplets, Flame, Wrench, Bath } from 'lucide-react';
+import type { PageId } from '../types/page';
 
 interface HomePageProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: PageId) => void;
 }
 
 export default function HomePage({ onNavigate }: HomePageProps) {
@@ -107,22 +108,21 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         <div className="mt-8 md:mt-12 bg-gray-50 rounded-2xl p-6 md:p-18">
           <div className="grid md:grid-cols-2 gap-6 md:gap-18 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-2">LG Company</h2>
               <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
                 Ekipi ynë i profesionistëve të licencuar sjell një pasuri të madhe njohurish dhe përvoje në çdo punë,
                 pavarësisht madhësisë apo kompleksitetit të saj. Ne krenohemi me çmime transparente, cilësi të lartë
                 në punë dhe shërbim të jashtëzakonshëm ndaj klientit. Kur kontaktoni LG, ju nuk po merrni vetëm një
                 hidraulik, por një partner të besueshëm, të përkushtuar për të zgjidhur sfidat tuaja hidraulike në
                 mënyrë efikase dhe profesionale. Nga mirëmbajtja rutinë deri te instalimet komplekse, ne i trajtojmë
-                të gjitha me të njëjtin nivel profesionalizmi dhe vëmendjeje ndaj detajeve, gjë qё na ka sjellё qindra
-                vlerёsime me pesё yje nga klientёt tanё.
+                të gjitha me të njëjtin nivel profesionalizmi dhe vëmendjeje ndaj detajeve, gjë që na ka sjellë qindra
+                vlerësime me pesë yje nga klientët tanë.
               </p>
             </div>
             <div className="relative">
               <img
-                src="https://cdn.prod.website-files.com/643dd13153ce80ea0a9ceae9/68deab6039c6575485a4eb66_64a2d407bfcebde9109cf23a_Bathroom%2520Plumbing.png"
-                alt="Professional plumber with tools"
-                className="rounded-xl shadow-2xl"
+                src="/img/LgLogo.png"
+                alt="LG Company logo"
+                className="mx-auto h-16 w-[22rem] rounded-full border border-blue-200 bg-white px-6 py-2 object-contain shadow-md ring-1 ring-blue-100 transition-all hover:shadow-lg md:h-20 md:w-[28rem]"
               />
             </div>
           </div>
@@ -145,3 +145,5 @@ export default function HomePage({ onNavigate }: HomePageProps) {
     </div>
   );
 }
+
+

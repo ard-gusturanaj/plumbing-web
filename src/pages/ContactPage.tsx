@@ -58,7 +58,7 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-xl border border-gray-200">
             <iframe
               title="LG Company Location"
-              src="https://www.google.com/maps?q=LG%20Company%2C%20Rruga%20U%C3%87K%2C%20Istog%2031000&output=embed"
+              src="https://maps.google.com/maps?hl=en&q=LG%20Nxemje%2FUj%C3%ABsjell%C3%ABs%2C%20Rruga%20U%C3%87K%2C%20Istog%2031000&z=18&output=embed"
               className="w-full h-[280px] md:h-[420px] border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -85,3 +85,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
