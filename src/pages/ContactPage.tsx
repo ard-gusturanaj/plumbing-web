@@ -54,13 +54,14 @@ export default function ContactPage() {
             <MapPin className="w-6 h-6 text-blue-600" />
             <h3 className="text-2xl font-bold text-gray-900">Lokacioni</h3>
           </div>
-          <p className="text-sm md:text-base text-gray-600 mb-4">Istog</p>
+          <p className="text-sm md:text-base text-gray-600 mb-4">Rruga UÇK, Istog 31000</p>
           <div className="overflow-hidden rounded-xl border border-gray-200">
             <iframe
-              title="LG Company Location"
-              src="https://maps.google.com/maps?hl=en&q=LG%20Nxemje%2FUj%C3%ABsjell%C3%ABs%2C%20Rruga%20U%C3%87K%2C%20Istog%2031000&z=18&output=embed"
-              className="w-full h-[280px] md:h-[420px] border-0"
-              loading="lazy"
+              title="LG Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2928.251390340972!2d20.49325090122424!3d42.78303511707462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353199cd58934bd%3A0x9685c16161983ab4!2zTEcgTmdyb2hqZS9VasOrc2plbGzDq3M!5e0!3m2!1sen!2s!4v1774476334816!5m2!1sen!2s"
+              className="w-full h-[320px] md:h-[420px] border-0"
+              loading="eager"
+              allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
@@ -85,4 +86,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
